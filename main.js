@@ -1,4 +1,6 @@
 import express from "express";
+import moviesRoutes from "./routes/movies.routes.js";
+
 
 const app = express();
 const port = 3300;
@@ -7,20 +9,11 @@ app.get("/", (req, res) => {
   res.json({ message: "Hello World" });
 });
 
-app.get("/movies",()=>{
 
+// Middleware for the routes
+// app.use("/movies",moviesRoutes);
 
-});
-
-app.post("/movies",()=>{
-
-})
-
-app.put("/movies:id",()=>{
-
-})
-
-app.delete("/movies:id",()=>{})
+app.use("/movies", moviesRoutes);
 
 
 

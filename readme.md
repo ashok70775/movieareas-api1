@@ -8,3 +8,7 @@ Movie API doc
 `git commit -m 'message'`
 `git push -u origin main`
 `git push`
+
+# to run the app
+`nodemon main.js` or
+`npm run server`
